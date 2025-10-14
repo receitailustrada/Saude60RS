@@ -13,17 +13,21 @@ Interface leve (HTML único) para atenção à pessoa idosa: **calculadora IVCF-
 ## 🚀 Como usar
 1. Baixe o arquivo `index.html` e abra no navegador.
 2. Preencha os campos do cabeçalho e responda ao IVCF-20 (marque **Sim** somente quando houver declínio).
-3. Veja o **escore**, a **categoria** e as **recomendações**.
+3. Consulte o **escore**, a **categoria** e as **recomendações**.
 4. Use **Exportar JSON** para salvar o atendimento ou **Importar JSON** para reabrir.
 5. Clique em **Imprimir** para gerar a via com **linhas de assinatura**.
 
-> Dica: todo o estado fica no `localStorage` (offline). O JSON exportado contém apenas o atendimento corrente.
+> Observação: todo o estado fica no `localStorage` (offline). O JSON exportado contém apenas o atendimento corrente.
+
+## 🧩 Arquitetura
+- Projeto **estático** (HTML/CSS/JS) — não requer backend.
+- 1 arquivo principal: `index.html` (inclui estilos e scripts embutidos).
 
 ## 📦 Desenvolvimento
-- O projeto é **estático** (HTML/CSS/JS). Basta editar `index.html`.
+- Edite diretamente o `index.html`.
 - Padrão de *commit* sugerido: Conventional Commits (`feat:`, `fix:`, `docs:`, etc.).
 
-### Scripts úteis (opcional)
+### Servidor local (opcional)
 ```bash
-# servidor local simples (Python 3)
+# Python 3
 python -m http.server 8080
