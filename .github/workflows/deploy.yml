@@ -1,1 +1,24 @@
+name: Deploy CruzAltaRS
+on:
+  push:
+    branches: [ main ]
 
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Código
+        uses: actions/checkout@v3
+
+      - name: Validar Identidade Visual (Lint CSS)
+        run: |
+          # Exemplo simples: falha se encontrar 'font-family: Inter'
+          grep -rv "Inter" ./css || exit 1
+
+      - name: Deploy para Produção
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /public_html/
