@@ -1,33 +1,53 @@
-# Saúde 60+RS — IVCF-20 + Painel IA (Frontend independente)
+# Saúde60RS - Banco de Imagens Ilustradas
 
-Interface leve (HTML único) para atenção à pessoa idosa: **calculadora IVCF-20**, **recomendações automáticas**, **tema claro/escuro**, **exportação/importação JSON** e **relatório imprimível com assinaturas**. Zero dependências de servidor.
+Este repositório reúne um **banco de imagens e ilustrações digitais voltadas para a saúde e bem-estar da pessoa idosa**, com foco em cenários de Atenção Primária à Saúde (APS) e humanização do atendimento médico. 
 
-## ✨ Recursos
-- **IVCF-20 completo** (itens 1–20 + subitens; IMC automático).
-- **Classificação** Baixa (0–6), Moderada (7–14), Alta (≥15).
-- **Recomendações dinâmicas**: quedas/marcha, cognição, humor, visão/audição, nutrição/sarcopenia, polifarmácia, internação.
-- **Campos do projeto**: município, UBS/ESF, profissional, CNS/CPF, paciente e data.
-- **Exportar/Importar JSON**, **Imprimir/PDF**, **tema escuro**.
-- **UI** glass/neumórfica, responsiva, sem dependências externas (apenas fonte Google).
+O objetivo deste projeto é fornecer recursos visuais de alta qualidade para materiais educativos, guias de orientações, prontuários ilustrados (receitas ilustradas) e plataformas de telessaúde focadas no público 60+.
 
-## 🚀 Como usar
-1. Baixe o arquivo `index.html` e abra no navegador.
-2. Preencha os campos do cabeçalho e responda ao IVCF-20 (marque **Sim** somente quando houver declínio).
-3. Consulte o **escore**, a **categoria** e as **recomendações**.
-4. Use **Exportar JSON** para salvar o atendimento ou **Importar JSON** para reabrir.
-5. Clique em **Imprimir** para gerar a via com **linhas de assinatura**.
+---
 
-> Observação: todo o estado fica no `localStorage` (offline). O JSON exportado contém apenas o atendimento corrente.
+## 📸 Exemplo de Conteúdo
 
-## 🧩 Arquitetura
-- Projeto **estático** (HTML/CSS/JS) — não requer backend.
-- 1 arquivo principal: `index.html` (inclui estilos e scripts embutidos).
+O repositório conta com avatares e cenários padronizados no formato `.webp`, que otimiza o carregamento em plataformas web e aplicativos sem perda de qualidade.
 
-## 📦 Desenvolvimento
-- Edite diretamente o `index.html`.
-- Padrão de *commit* sugerido: Conventional Commits (`feat:`, `fix:`, `docs:`, etc.).
+* **Médico da APS e Casal de Idosos:** Representação visual de atendimento humanizado, acolhimento e comunicação clara entre profissionais de saúde e pacientes idosos.
 
-### Servidor local (opcional)
-```bash
-# Python 3
-python -m http.server 8080
+---
+
+## 🛠️ Padrões do Repositório
+
+### Formato de Arquivo
+* **`.webp`**: Todos os arquivos estão prioritariamente neste formato para garantir alta compressão e excelente performance web.
+
+### Convenção de Nomenclatura
+Os arquivos seguem uma estrutura de nomes clara para facilitar a busca e a automatização de scripts:
+`[contexto]-[projeto]-[identificador_da_imagem].webp`
+
+* Exemplo: `smaca-s60mrs-avatar-medico-aps-casal-idosos.webp`
+
+---
+
+## 📁 Como Utilizar as Imagens
+
+Você pode utilizar estas imagens diretamente em suas aplicações web via URL do GitHub Pages ou através do link de entrega bruta (*raw link*):
+
+```html
+<img src="https://githubusercontent.com" alt="Médico da APS conversando com casal de idosos" width="400">
+```
+
+---
+
+## 👥 Contribuição
+
+Contribuições para expandir o banco de imagens são muito bem-vindas! Para contribuir:
+
+1. Faça um **Fork** do projeto.
+2. Crie uma **Branch** para sua nova ilustração (`git checkout -b feature/nova-imagem`).
+3. Adicione a imagem na pasta correspondente seguindo o padrão de nomenclatura.
+4. Abra um **Pull Request** detalhando o contexto de uso da ilustração.
+
+---
+
+## ⚖️ Licença
+
+Este projeto está sob a licença [MIT]. Consulte o arquivo `LICENSE` para obter mais detalhes sobre o uso comercial e atribuições necessárias.
